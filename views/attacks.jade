@@ -4,10 +4,14 @@ block content
 
   div.attacks.textBlack
 
-    form#formUpload(method='POST' action='/attack/cmd')
-      button.btn-danger Attack
+    div
+      form#formUpload(method='POST' action='/attack/cmd')
+        button.btn.btn-danger Test Attack
+    div.mt2
+      form#formUpload(method='POST' action='/attack/workloadAttack')
+        button.btn.btn-danger Attack Workload
   
-    h2 Below are some of the most common atttacks in the industry
+    h2.mt2 Below are some of the most common atttacks in the industry
 
     p.marginTop  These attacks can be protected in many different ways which are laid out below the attacks
 
