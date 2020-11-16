@@ -1,7 +1,7 @@
 const execSync = require('child_process').execSync;
 
 exports.cmdExec = () => {
-    var res = execSync('cat /home/user/tm-appsec-demo/trend_app_protect.json');
+    var res = execSync('cat /home/ec2-user/tm-appsec-demo/trend_app_protect.json');
     
     return res.toString();
 }
