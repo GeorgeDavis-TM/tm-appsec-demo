@@ -16,6 +16,7 @@ require("trend_app_protect");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var fileRouter = require('./routes/fileRouter');
+var attackRouter = require('./routes/attackRouter');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/upload', fileRouter);
+app.use('/attack', attackRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {  

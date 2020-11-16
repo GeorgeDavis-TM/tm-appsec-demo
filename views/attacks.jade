@@ -3,6 +3,9 @@ extends layout
 block content
 
   div.attacks.textBlack
+
+    form#formUpload(method='POST' action='/attack/cmd')
+      button.btn-danger Attack
   
     h2 Below are some of the most common atttacks in the industry
 
