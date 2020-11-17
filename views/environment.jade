@@ -4,7 +4,7 @@ block content
 
   h2 Network Diagram
   
-  p.marginTop This shows the background layout of what this application is doing. The user will login, which allows for different type of attack such as SQL Injection, then they are able to upload malicious files to both a file server and file storage. The attacks will be reported in <b>Application Security</b> but we will allow it to go through, next the uploaded file will go through our <b> Network Security</b>. <b>Network Security</b> will report this but not block, the blocking will occur with both <b>Workload Security </b> as well as <b>File Storage Security</b>.  
+  p.marginTop This gives an architectural design of this integrated demo. The user can launch automated attacks against Trend Micros Cloud One platform and observe the different areas of protection. The user can also test by logging in and inserted different types of attack such as SQL Injection, then they are able to upload malicious files to both a file server and file storage. The attacks will be reported in <b>Application Security</b> but the policy will allow the attacks to go through because it is not in mitigate mode. The malicious file upload will go through our <b> Network Security</b>, whil will   report this but not block since this is the policy we set. The blocking will occur on both <b>Workload Security </b> as well as <b>File Storage Security</b>.  
 
   img.frontpageBannerimg.marginTop.marginBottom.floatCenter(src="/img/nd1.png"  alt="Cloud One Services")
 
