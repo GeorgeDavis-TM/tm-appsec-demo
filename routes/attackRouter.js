@@ -22,4 +22,13 @@ router.post('/cmd', function(req, res, next) {
     // res.send('Command failed. Try again.');
   });
 
+  router.post('/conformity', function(req, res, next) {
+    var resp = cmdDeploy.conformityCfnExec()
+    res.send(resp)
+    //   res.send('Command run. Thank you.');
+    //   console.log("Command executed.");
+    // };
+    // res.send('Command failed. Try again.');
+  });
+
 module.exports = router;

@@ -10,3 +10,8 @@ exports.workloadAttackExec = () => {
     var res = execSync('/usr/bin/python3 /home/ec2-user/cloudOneWorkloadSecurityDemo/cloud_one_workload_security_demo.py');
     return res.toString();
 }
+
+exports.conformityCfnExec = () => {
+    var res = execSync('aws cloudformation create-stack --stack-name cloudonedemoteststack --template-body file:///home/user/tm-appsec-demo/scripts/misconfigured-cloudformation.json --parameters ParameterKey=VpcId,ParameterValue=vpc-67cf400e ParameterKey=SubnetId,ParameterValue=subnet-c1dc41a8');
+    return res.toString();
+}
