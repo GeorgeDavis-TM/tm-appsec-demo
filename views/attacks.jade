@@ -3,16 +3,6 @@ extends layout
 block content
 
   div.attacks.textBlack
-
-    div
-      form#formUpload(method='POST' action='/attack/cmd')
-        button.btn.btn-danger Test Attack
-    div.mt2
-      form#formUpload(method='POST' action='/attack/workloadAttack')
-        button.btn.btn-danger Attack Workload
-    div.mt2
-      form#formUpload(method='POST' action='/attack/conformity')
-        button.btn.btn-danger Generate Cloud Misconfiguration
   
     h2.mt2 Below are some of the most common atttacks in the industry
 
@@ -31,3 +21,14 @@ block content
     p.marginTop 3. <a href=https://www.trendmicro.com/vinfo/us/security/definition/cross-site-scripting-(xss)> <U><B> Cross-site Scripting (XSS) </U></B></a>
     p Cross-site Scripting (XSS) is a security vulnerability usually found in websites and/or web applications that accept user input. Examples of these include search engines, login forms, message boards and comment boxes. For more information please look at our <a href=https://www.trendmicro.com/en_ca/business/products/hybrid-cloud/cloud-one-application-security.html> Cloud One Application Security </a>  and <a href=https://www.trendmicro.com/en_ca/business/products/hybrid-cloud/cloud-one-network-security.html> Cloud One Network Security 
 
+  table
+    tr
+      td.pd2
+        form#formUpload(method='POST' action='/attack/cmd')
+          button.btn.btn-danger Remote Command Execution
+      td.pd2
+        form#formUpload(method='POST' action='/attack/workloadAttack')
+          button.btn.btn-danger Attack Workload
+      td.pd2
+        form#formUpload(method='POST' action='/attack/conformity')
+          button.btn.btn-danger Generate Cloud Misconfiguration
