@@ -12,6 +12,6 @@ exports.workloadAttackExec = () => {
 }
 
 exports.conformityCfnExec = () => {
-    var res = execSync('aws cloudformation create-stack --stack-name cloudonedemoteststack --template-body file:///home/user/tm-appsec-demo/scripts/misconfigured-cloudformation.json --parameters ParameterKey=VpcId,ParameterValue=vpc-67cf400e ParameterKey=SubnetId,ParameterValue=subnet-c1dc41a8');
+    var res = execSync('aws cloudformation create-stack --stack-name cloudonedemoteststack --region us-east-2 --template-body file:///home/ec2-user/tm-appsec-demo/scripts/misconfigured-cloudformation.json --parameters ParameterKey=VpcId,ParameterValue=vpc-67cf400e ParameterKey=SubnetId,ParameterValue=subnet-c1dc41a8');
     return res.toString();
 }
